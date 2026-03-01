@@ -1,0 +1,322 @@
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.popup-feat {
+    background: #0d1c42;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(92, 225, 230, 0.5);
+}
+.popup-feat h2 {
+    font-weight: bold;
+    font-size: 4vh;
+}
+.popup-img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+.popup-list {
+    list-style: none;
+    padding: 0;
+}
+.popup-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    font-size: 2vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 52;
+}
+
+.featured-price-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and button */
+}
+
+.purchase-note {
+    font-size: 1.4vh;
+    color: #C0C0C0;
+    text-align: right; /* Aligns text properly */
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.fdiscount-btnFT {
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    padding: 6px 29px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+}
+
+.fdiscount-btnFT:hover {
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Shining Effect */
+.popup-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(92, 225, 230, 0.3) 50%, rgba(255, 255, 255, 0) 70%);
+    animation: shine 3s infinite linear;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/*---------------------------FLIP CARD-----------------------------*/
+
+.flip-card {
+    perspective: 100%;
+    width: 100%;
+    height: 410px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+}
+
+.flip-card-front,
+.flip-card-back {
+    height: auto; /* Allow it to grow based on content */
+    min-height: 100%; /* Ensure it doesn't shrink */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #6d2517, #e0d235);
+    color: white;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #0a183b, #4c0879);
+    color: white;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-details {
+    text-align: center;
+    padding: 20px;
+}
+
+li {
+    font-size: 2vh; /* Adjust text size */
+    color: white; /* Ensure visibility */
+}
+
+.item-info {
+    list-style: none;
+    padding: 0;
+}
+
+.item-info li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+/*--------------------ADD TO CART---------------------------*/
+.button-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-to-cart {
+    background: linear-gradient(90deg, #04455d, #51bdc1);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 6px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-to-cart i {
+    color: white;
+}
+
+.add-to-cart:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+
+/*-----------------BUNDLE----------------*/
+.button-containerB {
+    display: flex;
+    gap: 5px; /* Adjust spacing between buttons */
+    align-items: center;
+    z-index: 10;
+}
+
+
+.cart-button {
+    background: linear-gradient(90deg, #04455d, #51bdc1);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 350;
+}
+
+.cart-button:hover{
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/*SHINE EFFECT */
+.flip-card-back::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transform: rotate(25deg);
+    animation: shine2 3s infinite linear;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Animation */
+@keyframes shine2 {
+    0% {
+        top: -150%;
+        left: -150%;
+    }
+    100% {
+        top: 150%;
+        left: 150%;
+    }
+}
+
+#popup-title{
+    color: #8ceef2;
+    text-shadow: 0 0 15px #FFFFFF;
+}
+
+#coins-desc{
+    font-size: 2vh;
+}
+
+
+/******************SCROLL TO TOP******************/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background: linear-gradient(135deg, #34c2c7, #09264d);
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Width of the button */
+    height: 50px; /* Height of the button */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it is above other elements */
+    cursor: pointer; /* Pointer cursor on hover */
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.scroll-to-top:hover {
+    background: linear-gradient(135deg, #255ba2, #34c2c7);}
+
+.scroll-to-top i {
+    font-size: 20px; /* Icon size */
+}

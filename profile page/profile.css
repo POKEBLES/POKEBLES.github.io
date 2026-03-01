@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('/store page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack header, main, and footer vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+main {
+    flex: 1; /* Allow main to grow and take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-banner {
+    background: linear-gradient(to right, #fffa76, #f7aa03);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center !important;
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px;
+    margin-left: 15vh;
+}
+
+.navbar1 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important;
+    background: #0a121f;
+    height: 90px !important;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 5px 15px rgba(150, 233, 250, 0.523);
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: 10vh;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.menu-a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all ease;
+}
+
+.home-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ffdd57;
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.store-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ff66b2;
+    transition: width 0.3s ease-in-out;
+    font-weight: 10px;
+    margin-top: 5px;
+}
+
+.cart-link {
+    color: #f4f4f4;
+}
+
+.cart-link:hover {
+    color: #ffdd57;
+}
+
+.transac-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #58c8f5;
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.nav-item.dropdown .profile-link {
+    color: #f4f4f4;
+}
+
+.nav-item.dropdown .profile-link:hover {
+    color: #ffdd57;
+}
+
+.home-link:hover::after,
+.store-link:hover::after,
+.transac-link:hover::after {
+    width: 100%;
+}
+
+@keyframes shineWave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.profile-container {
+    background: #232323;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 30px rgba(170, 251, 241, 0.3);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    color: #FFFFFF;
+    height: auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-container:hover {
+    box-shadow: 0px 12px 45px rgba(170, 251, 241, 0.8);
+    transform: scale(1.03);
+}
+
+/* The continuous moving shine effect */
+.profile-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(251, 170, 170, 0) 30%, rgba(191, 170, 251, 0.6) 50%, rgba(170, 251, 241, 0) 70%);
+    animation: shineWave 5s infinite linear;
+}
+
+.profile-container:hover {
+    box-shadow: 0 0 20px rgba(100, 200, 255, 0.6); /* Glow effect on hover */
+    transform: scale(1.03); /* Slight scale up on hover */
+}
+.profile-header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #ff4444, #2300d0);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+.profile-image-container {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #232323;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-body {
+    margin-top: 50px;
+    padding: 15px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.profile-info,
+.profile-email,
+.profile-phone {
+    font-size: 12px;
+    color: #f0f1f0;
+    margin-top: 3px;
+}
+
+.stats-container {
+    background: rgba(247, 244, 244, 0.1);
+    padding: 12px;
+    width: 200px;
+    border-radius: 12px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.stats-container div {
+    flex: 1;
+}
+
+.stats-container p {
+    margin: 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/*---------------------------FOOTER-----------------*/
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #073e48, #000000); /* Dark gradient */
+    color: white;
+    height: 40vh;
+    padding-top: 20px; /* Adjusted padding */
+    padding-bottom: 20px;
+    font-size: 14px;
+    border-radius: 20px 20px 0 0; /* Rounded top corners only */
+    box-shadow: 0px -5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    display: flex;
+    justify-content: center; /* Center the footer content horizontally */
+    align-items: center; /* Center the footer content vertically */
+    width: 100%; /* Ensure full width */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out the columns evenly */
+    align-items: center; /* Vertically center the items */
+    width: 90%; /* Adjust width to ensure content is centered properly */
+    max-width: 1200px; /* Optional: set a maximum width for large screens */
+    gap: 40px; /* Adjusted gap between the columns */
+}
+
+/* Footer Left: Links */
+.footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align links to the left */
+    width: 30%; /* Adjust width */
+}
+
+.footer .links .col-6 {
+    padding: 0 15px; /* Add spacing between the columns of links */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+    margin: 5px 0; /* Add vertical space between the links */
+    font-size: 15px;
+}
+
+/* Hover effect on links */
+.footer a:hover {
+    color: #ffcc00 !important; /* Force color change */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+/* Footer Center: All Rights Reserved */
+.footer .rights-reserved {
+    text-align: center;
+    width: 30%; /* Center section width */
+    
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Right: Logo */
+.footer .logo {
+    text-align: right;
+    width: 30%; /* Right section width */
+}
+
+/* Footer Text Styling */
+.footer p {
+    font-size: 15px;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center; /* Center the text */
+        gap: 20px; /* Added gap for stacked layout */
+    }
+
+    .footer .links {
+        width: 100%; /* Make the links section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .rights-reserved {
+        width: 100%; /* Make the rights-reserved section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .logo {
+        width: 100%; /* Make the logo section full width */
+    }
+}

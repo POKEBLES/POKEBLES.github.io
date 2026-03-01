@@ -1,0 +1,830 @@
+/*-------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url('/store page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+.top-banner {
+    background: linear-gradient(to right, #fffa76, #f7aa03);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center !important;
+    font-size: 20px;
+}
+
+ 
+ .logo {
+    display: flex;
+    align-items: center;
+ }
+ 
+ .logo img {
+    width: 300px;
+    margin-left: 15vh;
+ }
+
+ .navbar1 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important; 
+    background: #0a121f;
+    height: 90px !important;
+    border-radius: 0 0 20px 20px; /* Rounded bottom only */
+    box-shadow: 0px 5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    font-family: 'Poppins', sans-serif;
+}
+
+ .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: 10vh;
+ }
+ 
+ .nav-item {
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+ }
+ 
+ /* Sanrio-Style Hover Effect Integrated */
+ .menu-a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all ease;
+ }
+
+/* Individual Hover Effects */
+
+.code-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ffdd57; /* Yellow */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+
+.event-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ff66b2; /* Pink */
+    transition: width 0.3s ease-in-out;
+    font-weight: 10px;
+    margin-top: 5px;
+}
+
+.cart-link{
+    color:#f4f4f4;
+}
+
+.cart-link:hover{
+    color: #ffdd57;
+}
+
+/* Hover Underline Effect */
+.home-link:hover::after,
+.store-link:hover::after,
+.log-in-link:hover::after,
+.sign-in-link:hover::after,
+.code-link:hover::after,
+.event-link:hover::after{
+
+    width: 100%;
+}
+
+.nav-item.dropdown .my-account-link {
+    color:#f4f4f4;
+}
+
+.nav-item.dropdown .my-account-link:hover {
+    color: #ffdd57;
+}
+ 
+ .background {
+    position: relative;
+ }
+ 
+ @keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px;
+    margin-left: 15vh;
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.promo p {
+    color: white;
+    font-size: 43px;
+    font-weight: bold;
+    max-width: 50%;
+    margin: 0;
+}
+
+.promo-highlight {
+    color: #8ce8f6;
+    /* Change the color of the highlighted text to red */
+}
+
+.promo-img {
+    width: 450px;
+    /* Adjust the size */
+    height: auto;
+}
+
+
+#pulsing-image {
+    width: 400px;
+    /* Set the desired width */
+    height: auto;
+    /* Maintain aspect ratio */
+    animation: pulse 1.9s infinite;
+    /* Apply the animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Original size */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Back to original size */
+    }
+}
+
+/*--------------------------------------------------------*/
+
+/* Navbar 2 Styling */
+#navbar2 {
+    position: sticky;
+    top: 15px;
+    background-color: #80dcf8;
+    overflow: hidden;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    z-index: 1000;
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.nav-link2 {
+    content: "";
+    text-decoration: none;
+    color: #0b0f19;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Custom Underline */
+.nav-link2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+}
+
+/* Hover Effect */
+.nav-link2:hover {
+    color: #ff7134;
+    /* Change text color on hover */
+    text-shadow: 1px 0 2px hsla(19, 83%, 7%, 0.52);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link2.active {
+    color: #ff7134;
+}
+
+.nav-link2:hover::after {
+    background-color: #ff7134;
+    transform: scaleX(1);
+}
+
+/* Active Class for Clicked Link */
+.nav-link2.active::after {
+    background-color: #ff7134;
+    transform: scaleX(1);
+}
+
+/*--------------------CATEGORY--------------------------------------*/
+
+.category-card {
+    background-color: #0b0f19;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 30px;
+    width: 250px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.category-link {
+    text-decoration: none;
+    /* Remove default link underline */
+    display: block;
+    /* Make it a block to wrap the whole card */
+    width: fit-content;
+    /* Prevent stretching */
+}
+
+/* Product Count Styling (Align to Right) */
+.number-of-prod {
+    font-size: 14px;
+    color: #cde8ff;
+    /* Light blue */
+    text-align: right;
+    /* Align text to right */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    /* Adjust to fine-tune placement */
+}
+
+/* Category Title (Align to Left) */
+.category-card h3 {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 0px;
+    /* Move h3 slightly to the left */
+    font-size: 18px;
+}
+
+/* Image Styling */
+.category-card img {
+    width: 100px;
+    /* Adjust image size */
+    display: block;
+    margin: 10px auto 5px auto;
+    /* Keep image centered */
+}
+
+/* Hover Effect */
+.category-card:hover {
+    transform: scale(1.05);
+    /* Slight zoom */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Product Count Styling */
+.number-of-prod {
+    font-size: 14px;
+    color: #cde8ff;
+    /* Light blue */
+}
+
+/* FEATURED--------------------------------------------------------- */
+.featured {
+    position: relative;
+    /* Position relative for absolute positioning of children */
+    display: flex;
+    /* Allow the image to be treated as a block */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.featured img {
+    margin: 60px;
+    margin-bottom: 25px;
+    width: 60%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.special-label1 {
+    font-size: 10px;
+    position: absolute;
+    /* Position it absolutely within the featured div */
+    top: 25%;
+    /* Distance from the top */
+    left: 22%;
+    /* Distance from the left */
+    background-color: #5ce1e6;
+    /* Semi-transparent background */
+    padding: 5px 5px;
+    /* Padding around the text */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.discount-btn {
+    position: absolute;
+    /* Position it absolutely within the featured div */
+    bottom: 20%;
+    /* Distance from the bottom */
+    left: 22%;
+    /* Distance from the left */
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    /* Gradient background */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove default border */
+    padding: 10px 15px;
+    /* Padding for the button */
+    border-radius: 20px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+    /* Smooth transition for background */
+}
+
+.discount-btn:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.old-price {
+    text-decoration: line-through;
+    /* Strikethrough for old price */
+    margin-right: 5px;
+    /* Space between old and new price */
+}
+
+.new-price {
+    font-weight: bold;
+    /* Bold for new price */
+}
+
+.featured img:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+
+/*--------------------------------SECTION HEADER--------------------------*/
+.section-title {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 30px 0; /* Add vertical margin for spacing */
+    width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem; /* Adjust font size as needed */
+    margin: 0 20px; /* Add horizontal margin to create space around the title */
+    position: relative; /* Position relative for the line */
+    z-index: 1; /* Ensure the title is above the line */
+}
+
+.line {
+    flex-grow: 1; /* Allow the line to grow and take available space */
+    height: 4px; /* Height of the line */
+    background-color: #ffffff; /* Color of the line */
+    margin: 0 10px; /* Space between the title and the line */
+    max-width: calc(25% - 50px); /* Limit the width of the lines */
+}
+
+/*---------------------ICONS PROPERTIES-----------*/
+.items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    /* Adjust spacing between items */
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    border-radius: 5px;
+    /* Optional: for rounded icons */
+}
+
+.quantity-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    background: #04455d;
+    color: white;
+    font-size: 9px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+/***********ITEM BOXES***************/
+/* General Styling */
+.item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures uniform spacing */
+    height: 100%;
+    /* Makes all boxes take the same height */
+    background: linear-gradient(to Bottom, #000000, #111b36);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-box:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Top Section: Days Left */
+.days-left {
+    background: linear-gradient(to right, #5ce1e6, #04455d);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Product Image */
+.game-item {
+    width: 130px;
+    margin: 10px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+#plain {
+    display: block;
+    margin: 40px auto 0 auto;
+}
+
+/* Bottom Section */
+.bottom-section {
+    background-color: #141b27;
+    padding: 10px;
+    position: relative;
+    /* Ensures it stays inside */
+    width: 100%;
+    height: auto;
+    /* Adjust based on content */
+    min-height: 60px;
+}
+
+.limit {
+    font-size: 10px;
+}
+
+/* Product Name */
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Price Button */
+.price {
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: #0b0f19;
+    border: none;
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80%;
+    display: block;
+    margin: auto;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.special-label {
+    background-color: #fffa61;
+    /* Light blue */
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    position: absolute;
+    top: 45px;
+    /* Adjust as needed */
+    left: 10px;
+    /* Align it properly */
+}
+
+.special-label2 {
+    background-color: #fffa61;
+    /* Light blue */
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    position: absolute;
+    top: 20px;
+    /* Adjust as needed */
+    left: 10px;
+}
+
+.row {
+    --bs-gutter-x: 10px;
+    /* horizontal gap */
+    --bs-gutter-y: 50px;
+    /* vertical gap */
+}
+
+.discount-btn2 {
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: white;
+    border: none;
+    font-size: 13px;
+    padding: 6px 29px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.discount-btn2:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.price:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Back to Home Button */
+.back-to-home-btn {
+    position: absolute;
+    /* Change to absolute for better positioning */
+    top: 23vh;
+    /* Adjust as needed */
+    left: 50px;
+    /* Move to the left side */
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    padding-left: 0;
+    /* Remove left padding to align with the button */
+}
+
+.back-to-home-btn:hover {
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.back-to-home-btn i {
+    margin-right: 10px;
+}
+/* Modal Styles */
+.modal-content {
+    background-color: #141b27; /* Dark background for the modal */
+    color: white; /* White text for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.modal-header {
+    border-bottom: 1px solid #5ce1e6; /* Light blue border for header */
+}
+
+.modal-title {
+    font-size: 1.5rem; /* Larger title font size */
+    font-weight: bold; /* Bold title */
+}
+
+.modal-body {
+    padding: 20px; /* Padding for the body */
+}
+
+.modal-footer {
+    border-top: 1px solid #5ce1e6; /* Light blue border for footer */
+}
+
+.btn-close {
+    background: transparent; /* Transparent background for close button */
+    border: none; /* No border */
+    color: #ff7134; /* Close button color */
+    font-size: 1.5rem; /* Larger close button */
+}
+
+.btn-close:hover {
+    color: #fffa61; /* Change color on hover */
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%; /* Make modal wider on smaller screens */
+    }
+}
+
+/*---------------------------FOOTER-----------------*/
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #073e48, #000000); /* Dark gradient */
+    color: white;
+    height: 40vh;
+    padding-top: 20px; /* Adjusted padding */
+    padding-bottom: 20px;
+    font-size: 14px;
+    border-radius: 20px 20px 0 0; /* Rounded top corners only */
+    box-shadow: 0px -5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    display: flex;
+    justify-content: center; /* Center the footer content horizontally */
+    align-items: center; /* Center the footer content vertically */
+    width: 100%; /* Ensure full width */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out the columns evenly */
+    align-items: center; /* Vertically center the items */
+    width: 90%; /* Adjust width to ensure content is centered properly */
+    max-width: 1200px; /* Optional: set a maximum width for large screens */
+    gap: 40px; /* Adjusted gap between the columns */
+}
+
+/* Footer Left: Links */
+.footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align links to the left */
+    width: 30%; /* Adjust width */
+}
+
+.footer .links .col-6 {
+    padding: 0 15px; /* Add spacing between the columns of links */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+    margin: 5px 0; /* Add vertical space between the links */
+    font-size: 15px;
+}
+
+/* Hover effect on links */
+.footer a:hover {
+    color: #ffcc00 !important; /* Force color change */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+/* Footer Center: All Rights Reserved */
+.footer .rights-reserved {
+    text-align: center;
+    width: 30%; /* Center section width */
+    
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Right: Logo */
+.footer .logo {
+    text-align: right;
+    width: 30%; /* Right section width */
+}
+
+/* Footer Text Styling */
+.footer p {
+    font-size: 15px;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center; /* Center the text */
+        gap: 20px; /* Added gap for stacked layout */
+    }
+
+    .footer .links {
+        width: 100%; /* Make the links section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .rights-reserved {
+        width: 100%; /* Make the rights-reserved section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .logo {
+        width: 100%; /* Make the logo section full width */
+    }
+}

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon GO Web Store</title>
+    <link rel="icon" type="image/png" href="tab_icon.png">
+    <link rel="stylesheet" href="storepage.css">
+    <link rel="stylesheet" href="storepage_style2.css">
+    <link rel="stylesheet" href="popup_storepage.css">
+    <!--bootstrap --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script defer src="storepage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+</head>
+
+<header>
+    <div class="top-banner">
+        % Discount for your first Web Store purchase on any item $9.99 or more!
+    </div>
+    <nav class="navbar1">
+        <div class="logo">
+            <img src="images/webstorelogo.png" alt="Pokémon GO Logo">
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="https://pokebles.github.io/" class="menu-a home-link">Home</a></li>
+            <li class="nav-item"><a href="/store page/storepage.html" class="menu-a store-link">Store</a></li>
+
+            <div class="login-signup-links">
+                <li class="nav-item"><a href="/sign in page/loginpage.html" class="menu-a log-in-link">Log In</a></li>
+                <li class="nav-item"><a href="/sign in page/registerpage.html" class="menu-a sign-in-link">Sign Up</a></li>
+            </div>
+
+            <div class="account-links">
+                <li class="nav-item"><a href="/code redemption page/code_redemption.html" class="menu-a code-link">Code Redemption</a></li>
+                <li class="nav-item"><a href="/event ticketing page/event_ticketing.html" class="menu-a event-link">Event Ticketing</a></li>
+                <div class="pokecoin-coins">
+                    <img src="/store page/images/virtual-currency.webp" alt="PokéCoin Icon" class="pokecoin-icon">
+                    <span>0 PokéCoins</span>
+                </div>
+                
+                <li class="nav-item">
+                    <a href="/cart page/cart_page.html" class="menu-a cart-link">
+                        <i class="fas fa-shopping-cart fa-lg"></i> 
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="menu-a my-account-link dropdown-toggle" id="myAccountDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-user fa-lg"></i> 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile page/profile.html" class="dropdown-item">Profile</a></li>
+                        <li><a href="#" class="dropdown-item logout-link" id="logoutButton">Log Out</a></li>
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <div class="background">
+            <img src="images/3dsquirtle.png" class="pokemon-left" alt="Squirtle">
+            <img src="images/3dcharizard.png" class="pokemon-right" alt="Charizard">
+        </div>
+
+        <!-- Fixed Carousel Structure -->
+        <section class="carousel">
+            <button class="carousel-btn left-btn">&lt;</button>
+            <div class="carousel-container">
+                <div class="store-card active" data-position="middle">
+                    <img src="images/homepage card 1.png" alt="Homepage Card 1">
+                    <div class="card-overlay">
+                        <span class="tag">ONE TIME ONLY</span>
+                        <h2>Pokémon GO Fest 2025: Global Ticket</h2>
+                        <a href="/payment page/payment.html" class ="price-btn">₱378.99</a>
+                    </div>
+                </div>
+                <div class="store-card" data-position="right">
+                    <img src="images/homepage card 2.png" alt="Homepage Card 2">
+                    <div class="card-overlay hidden">
+                        <span class="tag">LIMITED</span>
+                        <h2>Raid Pass Bundle</h2>
+                        <a href="/payment page/payment.html" class ="price-btn">₱249.99</a>
+                    </div>
+                </div>
+                <div class="store-card" data-position="left">
+                    <img src="images/homepage card 3.png" alt="Homepage Card 3">
+                    <div class="card-overlay hidden">
+                        <span class="tag">SPECIAL OFFER</span>
+                        <h2>Incense Pack</h2>
+                        <a href="/payment page/payment.html" class ="price-btn">₱159.99</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right-btn">&gt;</button>
+        </section>
+    </main>
+
+
+    <!----------------------------------------------STORE PAGE-------------------------------------------------->
+    <div class="promo" data-aos="fade-up">
+        <!---left side-->
+        <p><span class="promo-highlight">15% off</span> for your first Web Store purchase on any item $9.99 or more!
+        </p>
+        <!--right side-->
+        <img src=" images/promo.png" class="promo-img" id="pulsing-image">
+    </div>
+
+
+    <div id="navbar2" data-aos="fade-up">
+        <a href="#featured" class="nav-link2 featured-link">Featured</a>
+        <a href="#item-boxes" class="nav-link2 itembx-link">Item Boxes</a>
+        <a href="#poke-coins" class="nav-link2 coinz-link">PokéCoins</a>
+        <a href="#daily-bundles" class="nav-link2 bundle-link">Daily Bundles</a>
+    </div>
+
+
+    <!--Product categories-->
+    <div class="container mt-3" data-aos="fade-up">
+        <div class="row justify-content-center gx-3" data-aos="fade-up"> <!-- Reduced gutter -->
+            <!-- Item Boxes -->
+            <div class="col-md-3 d-flex justify-content-center mx-4">
+                <a href="#item-boxes" class="category-link">
+                    <div class="category-card">
+                        <p class="number-of-prod">11 Products</p>
+                        <img src=" images/itembox-category.png" alt="Item Boxes">
+                        <h3>Item Boxes</h3>
+                    </div>
+                </a>
+            </div>
+
+            <!-- PokéCoins -->
+            <div class="col-md-3 d-flex justify-content-center mx-4">
+                <a href="#item-boxes" class="category-link">
+                    <div class="category-card">
+                        <p class="number-of-prod">6 Products</p>
+                        <img src=" images/coins-category.png" alt="PokéCoins">
+                        <h3>PokéCoins</h3>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Daily Bundles -->
+            <div class="col-md-3 d-flex justify-content-center mx-4">
+                <a href="#item-boxes" class="category-link">
+                    <div class="category-card">
+                        <p class="number-of-prod">3 Products</p>
+                        <img src=" images/bundles-category.png" alt="Daily Bundles">
+                        <h3>Daily Bundles</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--************************************FEATURED*****************************************-->
+    <div class="featured-container" data-aos="fade-up" id="featured">
+        <div class="featured-text">
+            <span class="special-label1">FEATURED</span>
+            <h2>Pokémon GO Fest 2025: Global Ticket</h2>
+            <p><strong>Can only be purchased 1 time.</strong></p>
+            <button class="fdiscount-btn" onclick="location.href='/payment page/payment.html'">
+                <span class="old-price">₱439.00</span>
+                <span class="new-price">₱373.15</span>
+            </button>
+        </div>
+        <div class="featured-image">
+            <img src=" images/featured-gift.png" alt="Gift Box">
+            <div class="icon-list">
+                <div class="ficon-container">
+                    <img src=" images/item_event_ticket_10.webp" class="icon">
+                    <span class="quantity-badge">1</span>
+                </div>
+                <div class="ficon-container">
+                    <img src=" images/item_max_revive.webp" class="icon">
+                    <span class="quantity-badge">5</span>
+                </div>
+                <div class="ficon-container">
+                    <img src=" images/item_rare_candy.webp" class="icon">
+                    <span class="quantity-badge">5</span>
+                </div>
+                <div class="ficon-container">
+                    <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                    <span class="quantity-badge">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------POP UP FEATURED----------------------------->
+    <div id="featuredPopup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('featuredPopup')">&times;</span>
+            <div class="popup-shine"></div>
+            <span class="special-label1">FEATURED</span>
+            <img src=" images/featured-gift.png" alt="Gift Box" class="popup-img">
+            <h2>Pokémon GO Fest 2025: Global Ticket</h2>
+            <ul class="popup-list">
+                <li><img src=" images/item_event_ticket_10.webp" class="icon"> x1 Ticket</li>
+                <li><img src=" images/item_max_revive.webp" class="icon"> x5 Max Revive</li>
+                <li><img src=" images/item_rare_candy.webp" class="icon"> x5 Rare Candy</li>
+                <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x3 Premium Battle Pass</li>
+            </ul>
+            <div class="featured-price-container">
+                <p class="purchase-note">Can only be purchased 1 time.</p>
+                <button id="featuredDiscountBtn" class="fdiscount-btnFT"
+                    onclick="location.href='/payment page/payment.html'">
+                    <span class="old-price">₱439.00</span>
+                    <span class="new-price">₱373.15</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--*************ITEM BOXES******************-->
+    <div class="item-boxes" id="item-boxes" data-aos="fade-up">
+        <div class="section-title">
+            <span class="title">Item Boxes</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="days-left"><i class="far fa-clock"></i> 3 DAYS LEFT</h1>
+                                    <h1 class="special-label">ONE TIME ONLY</h1>
+                                    <img src=" images/fuzzybuddy.png" class="game-item">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_event_ticket_10.webp" class="icon">
+                                            <span class="quantity-badge">1</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_ultra_ball.webp" class="icon">
+                                            <span class="quantity-badge">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Fuzzy Buddy Research Day Ultra Ticket Box</p>
+                                        <p class="limit">Can only be purchased 1 time.</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                            <button class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Fuzzy Buddy Research Day Ultra Ticket Box
+                                    </h2>
+                                    <img src=" images/fuzzybuddy.png" class="game-item">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_event_ticket_10.webp" class="icon"> x1
+                                            Event Ticket</li>
+                                        <li><img src=" images/item_ultra_ball.webp" class="icon"> x5 Ultra
+                                            Ball</li>
+                                    </ul>
+                                    <p class="limit">Can only be purchased 1 time.</p>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="days-left"><i class="far fa-clock"></i> 4 DAYS LEFT</h1>
+                                    <h1 class="special-label">ONE TIME ONLY</h1>
+                                    <img src=" images/itembox-category.png" class="game-item">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_evergreen_ticket.webp" class="icon">
+                                            <span class="quantity-badge">1</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_rare_candy.webp" class="icon">
+                                            <span class="quantity-badge">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Bug Out Ultra Ticket Box</p>
+                                        <p class="limit">Can only be purchased 1 time.</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Bug Out Ultra Ticket Box</h2>
+                                    <img src=" images/itembox-category.png" class="game-item">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_evergreen_ticket.webp" class="icon"> x1
+                                            Evergreen Ticket</li>
+                                        <li><img src=" images/item_rare_candy.webp" class="icon"> x2 Rare
+                                            Candy</li>
+                                    </ul>
+                                    <p class="limit">Can only be purchased 1 time.</p>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="days-left"><i class="far fa-clock"></i> 5 DAYS LEFT</h1>
+                                    <h1 class="special-label">LIMITED-TIME ONLY</h1>
+                                    <img src=" images/GO rocket.png" class="game-item">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_ultra_ball.webp" class="icon">
+                                            <span class="quantity-badge">7</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_leader_map.webp" class="icon">
+                                            <span class="quantity-badge">7</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_golden_pinap_berry.webp" class="icon">
+                                            <span class="quantity-badge">7</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">GO Rocket Box</p>
+                                        <p class="limit">Can only be purchased 1 time.</p>
+                                        <div class="button-container">
+                                            <button class="discount-btn2"
+                                                onclick="location.href='/payment page/payment.html'">
+                                                <span class="old-price">₱289.00</span>
+                                                <span class="new-price">₱245.65</span>
+                                            </button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">GO Rocket Box</h2>
+                                    <img src=" images/GO rocket.png" class="game-item">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_ultra_ball.webp" class="icon"> x7 Ultra
+                                            Balls</li>
+                                        <li><img src=" images/item_leader_map.webp" class="icon"> x7 Leader
+                                            Maps</li>
+                                        <li><img src=" images/item_golden_pinap_berry.webp" class="icon"> x7
+                                            Golden Pinap Berries</li>
+                                    </ul>
+                                    <p class="limit">Can only be purchased 1 time.</p>
+                                    <div class="button-container">
+                                        <button class="discount-btn2"
+                                            onclick="location.href='/payment page/payment.html'">
+                                            <span class="old-price">₱289.00</span>
+                                            <span class="new-price">₱245.65</span>
+                                        </button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="days-left"><i class="far fa-clock"></i> 5 DAYS LEFT</h1>
+                                    <h1 class="special-label">LIMITED-TIME ONLY</h1>
+                                    <img src=" images/bundles-category.png" class="game-item">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_remote_raid_ticket.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_incubator_basic.webp" class="icon">
+                                            <span class="quantity-badge">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Ultra Raid Box</p>
+                                        <p class="limit">Can only be purchased 1 time.</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Ultra Raid Box</h2>
+                                    <img src=" images/bundles-category.png" class="game-item">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_remote_raid_ticket.webp" class="icon"> x3
+                                            Remote Raid Pass</li>
+                                        <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x3
+                                            Premium Battle Pass</li>
+                                        <li><img src=" images/item_incubator_basic.webp" class="icon"> x1 Egg
+                                            Incubator</li>
+
+                                    </ul>
+                                    <p class="limit">Can only be purchased 1 time.</p>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="days-left"><i class="far fa-clock"></i> 5 DAYS LEFT</h1>
+                                    <h1 class="special-label">LIMITED-TIME ONLY</h1>
+                                    <img src=" images/might-box.png" class="game-item">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_postcard_storage_upgrade.webp"
+                                                class="icon">
+                                            <span class="quantity-badge">1</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_remote_raid_ticket.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                                            <span class="quantity-badge">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Might and Mystery Box</p>
+                                        <p class="limit">Can only be purchased 3 times.</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">GO Rocket Box</h2>
+                                    <img src=" images/might-box.png" class="game-item">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_postcard_storage_upgrade.webp"
+                                                class="icon"> x1 Postcard Pages</li>
+                                        <li><img src=" images/item_remote_raid_ticket.webp" class="icon"> x3
+                                            Remote Raid Pass</li>
+                                        <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x2
+                                            Paid Raid Tickets</li>
+                                    </ul>
+                                    <p class="limit">Can only be purchased 3 times.</p>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="special-label2">POPULAR</h1>
+                                    <img src=" images/egg.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_incubator_basic.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Egg Incubator</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Egg Incubator</h2>
+                                    <img src=" images/egg.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_incubator_basic.webp" class="icon"> x3
+                                            Basic Incubators</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <h1 class="special-label2">POPULAR</h1>
+                                    <img src=" images/super.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_incubator_super.webp" class="icon">
+                                            <span class="quantity-badge">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Super Incubator</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Super Incubator</h2>
+                                    <img src=" images/super.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_incubator_super.webp" class="icon"> x2
+                                            Super Incubators</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <img src=" images/revive.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_max_revive.webp" class="icon">
+                                            <span class="quantity-badge">6</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Max Revive</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Max Revive</h2>
+                                    <img src=" images/revive.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_max_revive.webp" class="icon"> x6 Max
+                                            Revives</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <img src=" images/premiumB.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Premium Battle Pass</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Premium Battle Pass</h2>
+                                    <img src=" images/premiumB.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x3
+                                            Paid Raid Tickets</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱88.00</button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <img src=" images/particle.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_mp_replenish.webp" class="icon">
+                                            <span class="quantity-badge">6</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Max Particle Pack x6</p>
+                                        <div class="button-container">
+                                            <button class="price"
+                                                onclick="location.href='/payment page/payment.html'">₱235.00</button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Max Particle Pack x6</h2>
+                                    <img src=" images/particle.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_mp_replenish.webp" class="icon"> x6 Max
+                                            Particle Pack</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="price"
+                                            onclick="location.href='/payment page/payment.html'">₱235.00</button>
+                                        <!--ADD TO CART BUTTON-->
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <!-- FRONT SIDE -->
+                            <div class="flip-card-front">
+                                <div class="item-box">
+                                    <img src=" images/mushroom.png" class="game-item" id="plain">
+                                    <div class="items-container">
+                                        <div class="icon-container">
+                                            <img src=" images/item_max_boost.webp" class="icon">
+                                            <span class="quantity-badge">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-section">
+                                        <p class="item-name">Max Mushroom</p>
+                                        <div class="button-container">
+                                            <button class="discount-btn2"
+                                                onclick="location.href='/payment page/payment.html'">
+                                                <span class="old-price">₱289.00</span>
+                                                <span class="new-price">₱245.65</span>
+                                            </button>
+                                            <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BACK SIDE -->
+                            <div class="flip-card-back">
+                                <div class="item-details">
+                                    <h2 class="item-name" id="popup-title">Max Mushroom</h2>
+                                    <img src=" images/mushroom.png" class="game-item" id="plain">
+                                    <ul class="item-info">
+                                        <li><img src=" images/item_max_boost.webp" class="icon"> x3 Max
+                                            Boosts</li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <button class="discount-btn2"
+                                            onclick="location.href='/payment page/payment.html'">
+                                            <span class="old-price">₱289.00</span>
+                                            <span class="new-price">₱245.65</span>
+                                        </button>
+                                        <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="poke-coins" id="poke-coins" data-aos="fade-up">
+        <div class="section-title">
+            <span class="title">PokéCoins</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items1">
+                        <img src=" images/coin1.png" class="game-item">
+                        <div class="bottom-section">
+                            <p class="item-name">110 PokéCoins</p>
+                            <p class="limit">10 Web Store Bonus Coins</p>
+                            <div class="button-container">
+                                <button class="price"
+                                    onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                                <!--ADD TO CART BUTTON-->
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items2">
+                        <img src=" images/coin2.png" class="game-item">
+                        <div class="bottom-section">
+                            <p class="item-name">600 PokéCoins</p>
+                            <p class="limit">50 Web Store Bonus Coins</p>
+                            <div class="button-container">
+                                <button class="price"
+                                    onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                                <!--ADD TO CART BUTTON-->
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items3">
+                        <img src=" images/coin3.png" class="game-item">
+                        <div class="bottom-section">
+                            <p class="item-name">1,300 PokéCoins</p>
+                            <p class="limit">100 Web Store Bonus Coins</p>
+                            <div class="button-container">
+                                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                                    <span class="old-price">₱289.00</span>
+                                    <span class="new-price">₱245.65</span>
+                                </button>
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items4">
+                        <img src=" images/coin4.png" class="game-item">
+                        <div class="bottom-section">
+                            <p class="item-name">2,700 PokéCoins</p>
+                            <p class="limit">200 Web Store Bonus Coins</p>
+
+                            <div class="button-container">
+                                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                                    <span class="old-price">₱589.00</span>
+                                    <span class="new-price">₱500.65</span>
+                                </button>
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items5">
+                        <img src=" images/coin5.png" class="game-item">
+                        <div class="bottom-section">
+                            <p class="item-name">5,600 PokéCoins</p>
+                            <p class="limit">400 Web Store Bonus Coins</p>
+                            <div class="button-container">
+                                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                                    <span class="old-price">₱1,170.00</span>
+                                    <span class="new-price">₱994.50</span>
+                                </button>
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="coin-box" id="coin-items6">
+                        <img src=" images/coin6.png" class="game-item">
+                        <div class="bottom-section" id="coin-bottom">
+                            <p class="item-name">15,500 PokéCoins</p>
+                            <p class="limit">1,000 Web Store Bonus Coins</p>
+                            <div class="button-container">
+                                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                                    <span class="old-price">₱2,950.00</span>
+                                    <span class="new-price">₱2,507.50</span>
+                                </button>
+                                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------COINS POP UP-------------------------------------->
+    <div id="coins1Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins1Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin1.png" class="popup-img">
+            <h2 id="popup-title">110 PokéCoins</h2>
+            <p id="coins-desc">10 Web Store Bonus Coins</p>
+            <p id="coins-desc">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="price" onclick="location.href='/payment page/payment.html'">₱59.00</button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="coins2Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins2Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin2.png" class="popup-img">
+            <h2 id="popup-title">600 PokéCoins</h2>
+            <p id="coins-desc">50 Web Store Bonus Coins</p>
+            <p id="coins-desc">550 + 50 Web Store Bonus = 600 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="price" onclick="location.href='/payment page/payment.html'">₱149.00</button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="coins3Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins3Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin3.png" class="popup-img">
+            <h2 id="popup-title">1,300 PokéCoins</h2>
+            <p id="coins-desc">100 Web Store Bonus Coins</p>
+            <p id="coins-desc">1,200 + 100 Web Store Bonus = 1,300 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                    <span class="old-price">₱289.00</span>
+                    <span class="new-price">₱245.65</span>
+                </button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="coins4Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins4Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin4.png" class="popup-img">
+            <h2 id="popup-title">2,700 PokéCoins</h2>
+            <p id="coins-desc">200 Web Store Bonus Coins</p>
+            <p id="coins-desc">2,500 + 200 Web Store Bonus = 2,700 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                    <span class="old-price">₱589.00</span>
+                    <span class="new-price">₱500.65</span>
+                </button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="coins5Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins5Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin5.png" class="popup-img">
+            <h2 id="popup-title">5,600 PokéCoins</h2>
+            <p id="coins-desc">400 Web Store Bonus Coins</p>
+            <p id="coins-desc">5,200 + 400 Web Store Bonus = 5,600 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                    <span class="old-price">₱1,170.00</span>
+                    <span class="new-price">₱994.50</span>
+                </button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="coins6Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('coins6Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/coin6.png" class="popup-img">
+            <h2 id="popup-title">15,500 PokéCoins</h2>
+            <p id="coins-desc">1,000 Web Store Bonus Coins</p>
+            <p id="coins-desc">14,500 + 1,000 Web Store Bonus = 15,500 total PokéCoins.</p>
+            <div class="button-container">
+                <button class="discount-btn2" onclick="location.href='/payment page/payment.html'">
+                    <span class="old-price">₱2,950.00</span>
+                    <span class="new-price">₱2,507.50</span>
+                </button>
+                <button  class="add-to-cart" onclick="location.href='/cart page/cart_page.html'"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------DAILY BUNDLES------------------------------------>
+    <div class="dailybundles" id="daily-bundles" data-aos="fade-up">
+        <div class="section-title">
+            <span class="title">Daily Bundles</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="bundle-box" id="bundlebox1">
+                        <img src=" images/boost_box.png" class="game-item" id="bundlezz">
+                        <div class="items-container">
+                            <div class="icon-container">
+                                <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                                <span class="quantity-badge">1</span>
+                            </div>
+                            <div class="icon-container">
+                                <img src=" images/item_max_potion.webp" class="icon">
+                                <span class="quantity-badge">2</span>
+                            </div>
+                        </div>
+                        <div class="bottom-section" id="bundle-bottom">
+                            <p class="item-name">Boost Box</p>
+                            <div class="button-containerB">
+                                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                                    <img src=" images/virtual-currency.webp" class="coin-icon"> 99
+                                </button>
+                                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="bundle-box" id="bundlebox2">
+                        <img src=" images/bundles-category.png" class="game-item" id="bundlezz">
+                        <div class="items-container">
+                            <div class="icon-container">
+                                <img src=" images/item_paid_raid_ticket.webp" class="icon">
+                                <span class="quantity-badge">3</span>
+                            </div>
+                            <div class="icon-container">
+                                <img src=" images/poffin.png" class="icon">
+                                <span class="quantity-badge">1</span>
+                            </div>
+                            <div class="icon-container">
+                                <img src=" images/item_remote_raid_ticket.webp" class="icon">
+                                <span class="quantity-badge">3</span>
+                            </div>
+                        </div>
+                        <div class="bottom-section" id="bundle-bottom">
+                            <p class="item-name">Great Raid Box</p>
+                            <div class="button-containerB">
+                                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                                    <img src=" images/virtual-currency.webp" class="coin-icon"> 250
+                                </button>
+                                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                    <div class="bundle-box" id="bundlebox3">
+                        <img src=" images/voyager_box.png" class="game-item" id="bundlezz">
+                        <div class="items-container">
+                            <div class="icon-container">
+                                <img src=" images/item_incubator_super.webp" class="icon">
+                                <span class="quantity-badge">15</span>
+                            </div>
+                            <div class="icon-container">
+                                <img src=" images/poffin.png" class="icon">
+                                <span class="quantity-badge">2</span>
+                            </div>
+                            <div class="icon-container">
+                                <img src=" images/item_incubator_basic.webp" class="icon">
+                                <span class="quantity-badge">10</span>
+                            </div>
+                        </div>
+                        <div class="bottom-section" id="bundle-bottom">
+                            <p class="item-name">Voyager Box</p>
+
+                            <div class="button-containerB">
+                                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                                    <img src=" images/virtual-currency.webp" class="coin-icon"> 1,120
+                                </button>
+                                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bundle 1 -->
+    <div id="bundle1Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('bundle1Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/boost_box.png" alt="Gift Box" class="popup-img">
+            <h2 id="popup-title">Boost Box</h2>
+            <ul class="popup-list">
+                <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x1 Premium Battle Pass</li>
+                <li><img src=" images/item_max_potion.webp" class="icon"> x2 Max Potions</li>
+            </ul>
+            <div class="button-containerB">
+                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                    <img src=" images/virtual-currency.webp" class="coin-icon"> 99
+                </button>
+                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bundle 2 -->
+    <div id="bundle2Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('bundle2Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/bundles-category.png" alt="Gift Box" class="popup-img">
+            <h2 id="popup-title">Great Raid Box</h2>
+            <ul class="popup-list">
+                <li><img src=" images/item_paid_raid_ticket.webp" class="icon"> x3 Premium Battle Pas</li>
+                <li><img src=" images/poffin.png" class="icon"> x1 Poffin</li>
+                <li><img src=" images/item_remote_raid_ticket.webp" class="icon"> x3 Remote Raid Pass</li>
+            </ul>
+            <div class="button-containerB">
+                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                    <img src=" images/virtual-currency.webp" class="coin-icon"> 250
+                </button>
+                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bundle 3 -->
+    <div id="bundle3Popup" class="popup-overlay">
+        <div class="popup-feat">
+            <span class="close-btn" onclick="closePopup('bundle3Popup')">&times;</span>
+            <div class="popup-shine"></div>
+            <img src=" images/voyager_box.png" alt="Gift Box" class="popup-img">
+            <h2 id="popup-title">Voyager Box</h2>
+            <ul class="popup-list">
+                <li><img src=" images/item_incubator_super.webp" class="icon"> x15 Super Incubators</li>
+                <li><img src=" images/poffin.png" class="icon"> x2 Poffins</li>
+                <li><img src=" images/item_incubator_basic.webp" class="icon"> x10 Egg Incubators</li>
+            </ul>
+            <div class="button-containerB">
+                <button class="bundleprice" onclick="location.href='/payment page/payment.html'">
+                    <img src=" images/virtual-currency.webp" class="coin-icon"> 1,120
+                </button>
+                <button class="cart-button" onclick="location.href='/cart page/cart_page.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i> <!-- Arrow icon -->
+    </div>
+
+    
+   <!-------------------------------------------Footer ---------------------------------------------->
+  <footer class="footer bg-dark text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Column 1: Pokémon GO Links & Support Links (Split into Two Columns, Closer Together) -->
+            <div class="col-md-4">
+                <div class="row gx-2">
+                    <!-- Pokémon GO Links -->
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="https://pokemongolive.com/" class="text-white">Official Site</a></li>
+                            <li><a href="https://pokemongolive.com/leaderboard" class="text-white">Leaderboard</a></li>
+                            <li><a href="https://pokemongolive.com/events" class="text-white">Events</a></li>
+                            <li><a href="https://pokemongolive.com/news" class="text-white">News</a></li>
+                        </ul>
+                    </div>
+                    <!-- Support Links -->
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="https://store.pokemongolive.com/support" class="text-white">Help Center</a></li>
+                            <li><a href="https://store.pokemongolive.com/offer-redemption" class="text-white">Code Redemption</a></li>
+                            <li><a href="https://pokemongolive.com/community-day/map" class="text-white">Community Day Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Copyright & Disclaimer (Centered) -->
+            <div class="col-md-4 text-center">
+                <p>&copy; 2025 Pokebles. All rights reserved.</p>
+                <p>For educational purposes only. Images and assets are owned by Niantic.</p>
+            </div>
+
+            <!-- Column 3: Logo (Right Aligned) -->
+            <div class="col-md-4 text-end">
+                <img src="/store page/images/pokebleslogo.png" alt="Pokebles Logo" class="footer-logo">
+            </div>
+        </div>
+
+        <!-- Horizontal Line -->
+        <hr class="my-3 border-light opacity-50">
+
+        <!-- Social Media Icons Row -->
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script defer src="storepage_script2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

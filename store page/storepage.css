@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+ }
+ 
+ body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url('/store page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+ 
+.top-banner {
+    background: linear-gradient(to right, #fffa76, #f7aa03);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center !important;
+    font-size: 20px;
+}
+
+ 
+ .logo {
+    display: flex;
+    align-items: center;
+ }
+ 
+ .logo img {
+    width: 300px;
+    margin-left: 15vh;
+ }
+
+ .navbar1 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important; 
+    background: #0a121f;
+    height: 90px !important;
+    border-radius: 0 0 20px 20px; /* Rounded bottom only */
+    box-shadow: 0px 5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    font-family: 'Poppins', sans-serif;
+}
+
+ .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: 10vh;
+ }
+ 
+ .nav-item {
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+ }
+ 
+ /* Sanrio-Style Hover Effect Integrated */
+ .menu-a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all ease;
+ }
+
+/* Individual Hover Effects */
+
+.home-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ffdd57; /* Yellow */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.store-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ff66b2; /* Pink */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.log-in-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #58c8f5; /* Light Blue */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.sign-in-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #58c8f5; /* Light Blue */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.code-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ffdd57; /* Yellow */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.event-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ff66b2; /* Pink */
+    transition: width 0.3s ease-in-out;
+    font-weight: 10px;
+    margin-top: 5px;
+}
+
+.cart-link{
+    color:#f4f4f4;
+}
+
+.cart-link:hover{
+    color: #ffdd57;
+}
+
+/* Hover Underline Effect */
+.home-link:hover::after,
+.store-link:hover::after,
+.log-in-link:hover::after,
+.sign-in-link:hover::after,
+.code-link:hover::after,
+.event-link:hover::after{
+
+    width: 100%;
+}
+
+.nav-item.dropdown .my-account-link {
+    color:#f4f4f4;
+}
+
+.nav-item.dropdown .my-account-link:hover {
+    color: #ffdd57;
+}
+
+.pokecoin-coins {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust spacing */
+    padding: 10px;
+    margin-top: 21px; /* Align with other items */
+    color: white;
+}
+
+.pokecoin-icon {
+    width: 24px; /* Adjust size */
+    height: auto;
+}
+
+.background {
+    position: relative;
+}
+ 
+ @keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pokemon-left, .pokemon-right {
+    position: absolute;
+    z-index: 10; /* Higher than the cards */
+    animation: floatAnimation 3s ease-in-out infinite; /* Smooth floating effect */
+}
+
+
+ .pokemon-left {
+    position: absolute;
+    left: -70px; /* Move more outside */
+    top: 150px; /* Adjust height */
+    width: 500px; /* Increase size */
+}
+
+.pokemon-right {
+    position: absolute;
+    right: -50px; /* Move more outside */
+    top: -90px; /* Adjust height */
+    width: 450px; /* Increase size */
+}
+
+
+ 
+ 
+:root {
+    --card-width: 320px;
+    --card-height: 400px;
+    --card-radius: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    height: var(--card-height);
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 60px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background 0.3s ease;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.left-btn{
+ left:5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-btn {
+ right:5%;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Left button hover: Moves left slightly */
+.left-btn:hover {
+    transform: translateY(-50%) translateX(-5px) scale(1.1);
+    color:#ffcc00
+}
+
+/* Right button hover: Moves right slightly */
+.right-btn:hover {
+    transform: translateY(-50%) translateX(5px) scale(1.1);
+    color:#ffcc00
+}
+
+/* Carousel Cards */
+.carousel-container {
+    display: flex;
+    position: relative;
+    width: 800px;
+    height: var(--card-height);
+    justify-content: center;
+    align-items: center;
+}
+
+.store-card {
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    border-radius: 15px; /* Apply rounded corners to the entire card */
+   
+
+    
+}
+
+/* Positioning of Cards */
+.store-card[data-position="left"] {
+    transform: translateX(-120%) scale(0.85);
+    opacity: 0.7;
+}
+
+.store-card[data-position="middle"] {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.store-card[data-position="right"] {
+    transform: translateX(120%) scale(0.85);
+    opacity: 0.7;
+}
+
+/* Hide details for side cards */
+.hidden {
+    display: none;
+}
+
+
+.store-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Ensures the image itself has rounded corners */
+}
+
+/* Card Overlay */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    text-shadow: #0a121f 0px 1px 1px;
+    background-color: #f4f4f449 ;
+    border-radius: 15px;
+}
+
+.card-overlay.hidden {
+    display: none;
+}
+
+.card-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 40vh;
+}
+
+.tag {
+    background: rgb(238, 146, 194);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 5px;
+ }
+ 
+ @keyframes shineEffect {
+    0% { background-position: -200%; }
+    100% { background-position: 200%; }
+}
+
+.price-btn {
+    background: linear-gradient(90deg, #87dbff, #6be0ff, #87dbff);
+    background-size: 200% auto;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: Expands, shines, and glows */
+.price-btn:hover {
+    transform: scale(5);
+    box-shadow: 0px 0px 20px rgb(0, 176, 211);
+    animation: shineEffect 1.5s infinite linear;
+    
+}
+
+/* Click effect: Slightly presses down */
+.price-btn:active {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(88, 200, 245, 1);
+}
+
+
+
+/* 🔥 Fix #2: Adjust Pokémon images */
+.pokemon-left {
+    left: 0; /* Prevents overflow */
+    max-width: 400px; /* Ensures it doesn’t go too big */
+}
+
+.pokemon-right {
+    right: 0; /* Prevents overflow */
+    max-width: 400px;
+}
+
+/* 🔥 Fix #3: Adjust Carousel Width */
+.carousel-container {
+    width: 90vw; /* Adjust size dynamically */
+    max-width: 700px; /* Prevent excessive width */
+}
+
+/* 🔥 Fix #4: Prevent unwanted space */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*---------------------------FOOTER-----------------*/
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #073e48, #000000); /* Dark gradient */
+    color: white;
+    height: 40vh;
+    padding-top: 20px; /* Adjusted padding */
+    padding-bottom: 20px;
+    font-size: 14px;
+    border-radius: 20px 20px 0 0; /* Rounded top corners only */
+    box-shadow: 0px -5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    display: flex;
+    justify-content: center; /* Center the footer content horizontally */
+    align-items: center; /* Center the footer content vertically */
+    width: 100%; /* Ensure full width */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out the columns evenly */
+    align-items: center; /* Vertically center the items */
+    width: 90%; /* Adjust width to ensure content is centered properly */
+    max-width: 1200px; /* Optional: set a maximum width for large screens */
+    gap: 40px; /* Adjusted gap between the columns */
+}
+
+/* Footer Left: Links */
+.footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align links to the left */
+    width: 30%; /* Adjust width */
+}
+
+.footer .links .col-6 {
+    padding: 0 15px; /* Add spacing between the columns of links */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+    margin: 5px 0; /* Add vertical space between the links */
+    font-size: 15px;
+}
+
+/* Hover effect on links */
+.footer a:hover {
+    color: #ffcc00 !important; /* Force color change */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+/* Footer Center: All Rights Reserved */
+.footer .rights-reserved {
+    text-align: center;
+    width: 30%; /* Center section width */
+    
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Right: Logo */
+.footer .logo {
+    text-align: right;
+    width: 30%; /* Right section width */
+}
+
+/* Footer Text Styling */
+.footer p {
+    font-size: 15px;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center; /* Center the text */
+        gap: 20px; /* Added gap for stacked layout */
+    }
+
+    .footer .links {
+        width: 100%; /* Make the links section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .rights-reserved {
+        width: 100%; /* Make the rights-reserved section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .logo {
+        width: 100%; /* Make the logo section full width */
+    }
+}
+
+
+
+

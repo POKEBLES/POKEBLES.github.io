@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+<title>Pokémon GO Web Store - Code Redemption</title>
+<link rel="icon" type="image/png" href="tab_icon.png">
+<link rel="stylesheet" href="cart_page.css"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script defer src="cart_page.js"></script>
+</head>
+<header>
+    <div class="top-banner">
+        % Discount for your first Web Store purchase on any item $9.99 or more!
+    </div>
+    <nav class="navbar1">
+        <div class="logo">
+            <a href=" " class="back-to-home">
+                <img src="/code redemption page/webstorelogo.png" alt="Pokémon GO Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="https://pokebles.github.io/" class="menu-a home-link">Home</a></li>
+            <li class="nav-item"><a href="/store page/storepage.html" class="menu-a store-link">Store</a></li>
+            <li class="nav-item"><a href="/transaction page/transactionpage.html" class="menu-a transac-link">Transaction</a></li>
+            <li class="nav-item">
+                <a href="/cart page/cart_page.html" class="menu-a cart-link">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="menu-a profile-link dropdown-toggle" id="myAccountDropdown" data-bs-toggle="dropdown">
+                    <i class="fas fa-user fa-lg"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/profile page/profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="#" class="dropdown-item logout-link" id="logoutButton">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="background">
+        <img src="/store page/images/pokecoin.png" class="pokemon-left" alt="purplepokemon">
+        <img src="/store page/images/pokemonball.png" class="pokemon-right" alt="pinkpokemon">
+    </div>
+    <a href="/store page/storepage.html" class="back-to-home-btn">
+        <i class="fas fa-arrow-left"></i> Back to Store
+    </a>
+    
+<div class="content">
+    <h1>My Cart</h1>
+
+    <div class="cart-controls">
+        <label>
+            <input type="checkbox" id="select-all"> Select All
+        </label>
+    </div>
+
+    <div class="cart-items">
+        <div class="cart-item">
+            <input type="checkbox" class="select-item">
+            <img src="/cart page/images/itembox-category.png" alt="Pokémon GO Fest 2024" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Bug Out Ultra Ticket Box</h2>
+                <div class="quantity-control">
+                    <button class="quantity-button">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button class="quantity-button">+</button>
+                </div>
+                <p>$59.00</p>
+            </div>
+            <div class="cart-item-price">
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <input type="checkbox" class="select-item">
+            <img src="/cart page/images/mushroom.png" alt="Safari Zone: City Adventure" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Max Mushroom</h2>
+                <div class="quantity-control">
+                    <button class="quantity-button">-</button>
+                    <input type="number" value="2" min="1" class="quantity-input">
+                    <button class="quantity-button">+</button>
+                </div>
+                <p>$245.65</p>
+            </div>
+            <div class="cart-item-price">
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <input type="checkbox" class="select-item">
+            <img src="/cart page/images/particle.png" alt="Community Day Special Research" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Max Particle Pack x6</h2>
+                <div class="quantity-control">
+                    <button class="quantity-button">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button class="quantity-button">+</button>
+                </div>
+                <p>$235.00</p>
+            </div>
+            <div class="cart-item-price">
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-total">
+        <p>Total: $69.96</p>
+        <button class="checkout-button">Proceed to Checkout</button>
+    </div>
+</div>
+
+<footer class="footer bg-dark text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="row gx-2">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="https://pokemongolive.com/" class="text-white">Official Site</a></li>
+                            <li><a href="https://pokemongolive.com/leaderboard" class="text-white">Leaderboard</a></li>
+                            <li><a href="https://pokemongolive.com/events" class="text-white">Events</a></li>
+                            <li><a href="https://pokemongolive.com/news" class="text-white">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="https://store.pokemongolive.com/support" class="text-white">Help Center</a></li>
+                            <li><a href="EventTicketing.html" class="text-white">Event Ticketing</a></li>
+                            <li><a href="https://pokemongolive.com/community-day/map" class="text-white">Community Day Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <p>&copy; 2025 Pokebles. All rights reserved.</p>
+                <p>For educational purposes only. Images and assets are owned by Niantic.</p>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <img src="/store page/images/pokebleslogo.png" alt="Pokebles Logo" class="footer-logo">
+            </div>
+        </div>
+
+        <hr class="my-3 border-light opacity-50">
+
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="" class="text-white mx-2"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

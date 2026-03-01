@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon GO - Register</title>
+    <link rel="icon" type="image/png" href="tab_icon.png">
+    <link rel="stylesheet" href="registerpage.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="FOOTER.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <a href="https://pokebles.github.io/" class="back-home-btn">
+        <i class="fas fa-home"></i> Back to Home
+    </a>
+    
+    <div class="background"></div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-horizontal-white.svg" alt="Niantic Logo">
+            <h1>Create Your Account</h1>
+        </div>
+
+        <p class="signin-text">Sign up to start your Pokémon GO journey.</p>
+
+        <form id="register-form">
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="player-id">Player ID:</label>
+                <input type="text" id="player-id" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="ign">In-Game Name (IGN):</label>
+                <input type="text" id="ign" placeholder="Enter your in-game name" required>
+            </div>
+
+            <button type="submit" class="btn register-btn">Register</button>
+        </form>
+
+        <p class="signup-text">Already have an account? <a href="loginpage.html">Sign in here!</a></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Official Site</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Event Ticketing</a></li>
+                        <li><a href="#">Community Day Map</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p>&copy; 2025 Pokebles. All rights reserved.</p>
+                <p>For educational purposes only. Images and assets are owned by Niantic.</p>
+            </div>
+
+            <div class="footer-logo">
+                <img src="pokebleslogo.png" alt="Pokebles Logo">
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

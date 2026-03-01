@@ -1,0 +1,693 @@
+
+/*-------------------------------------------------------------------*/
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.promo p {
+    color: white;
+    font-size: 43px;
+    font-weight: bold;
+    max-width: 50%;
+    margin: 0;
+}
+
+.promo-highlight {
+    color: #8ce8f6;
+    /* Change the color of the highlighted text to red */
+}
+
+.promo-img {
+    width: 450px;
+    /* Adjust the size */
+    height: auto;
+}
+
+
+#pulsing-image {
+    width: 400px;
+    /* Set the desired width */
+    height: auto;
+    /* Maintain aspect ratio */
+    animation: pulse 1.9s infinite;
+    /* Apply the animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Original size */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Back to original size */
+    }
+}
+
+/*--------------------------------------------------------*/
+
+/* Navbar 2 Styling */
+#navbar2 {
+    position: sticky;
+    top: 15px;
+    background-color: #80dcf8;
+    overflow: hidden;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    z-index: 1000;
+    width: 60%;
+    max-width: 1200px;
+     margin: 0 auto;
+    border-radius: 10px;
+}
+
+.nav-link2 {
+    content: "";
+    text-decoration: none;
+    color: #0b0f19;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scaleX(0);
+      transform-origin: bottom left;
+}
+
+/* Hover Effect */
+.nav-link2:hover {
+
+    text-shadow: 1px 0 2px hsla(19, 83%, 7%, 0.52);
+    transition: color 0.3s ease-in-out;
+}
+.nav-link2.active {
+    color: #4c0879;
+}
+.nav-link2:hover::after {
+    background-color: #4c0879;
+    transform: scaleX(1);
+}
+
+/* Active Class for Clicked Link */
+.nav-link2.active::after {
+    background-color: #4c0879;
+    transform: scaleX(1);
+}
+
+/*--------------------CATEGORY--------------------------------------*/
+
+.category-card {
+    background-color: #0b0f19;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 30px;
+    width: 250px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.category-link {
+    text-decoration: none;
+    /* Remove default link underline */
+    display: block;
+    /* Make it a block to wrap the whole card */
+    width: fit-content;
+    /* Prevent stretching */
+}
+
+/* Product Count Styling (Align to Right) */
+.number-of-prod {
+    font-size: 14px;
+    color: #cde8ff;
+    /* Light blue */
+    text-align: right;
+    /* Align text to right */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    /* Adjust to fine-tune placement */
+}
+
+/* Category Title (Align to Left) */
+.category-card h3 {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 0px;
+    /* Move h3 slightly to the left */
+    font-size: 18px;
+}
+
+/* Image Styling */
+.category-card img {
+    width: 100px;
+    /* Adjust image size */
+    display: block;
+    margin: 10px auto 5px auto;
+    /* Keep image centered */
+}
+
+/* Hover Effect */
+.category-card:hover {
+    transform: scale(1.05);
+    /* Slight zoom */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Product Count Styling */
+.number-of-prod {
+    font-size: 14px;
+    color: #cde8ff;
+    /* Light blue */
+}
+
+/*--------------------------------------- FEATURED------------------------------------- */
+.featured-container {
+    background: radial-gradient(circle, #0b4978, #0b0f19);
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 970px;
+    height: 250px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ensure transition applies */
+    transform-origin: center; /* Ensures scaling expands evenly */
+}
+
+.featured-container:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.featured-text {
+    flex: 1;
+    padding-left: 40px;
+    max-width: 500px;
+}
+
+.featured-text h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.featured-text p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+}
+
+.special-label1 {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background-color: #5ce1e6;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #0b0f19;
+    border-radius: 5px;
+}
+
+.fdiscount-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    padding: 6px 29px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.fdiscount-btn:hover {
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.featured-image {
+    position: relative;
+    margin-right: 40px;
+}
+
+.featured-image img {
+    width: 180px;
+}
+
+.icon-list {
+    position: absolute;
+    right: -30px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+.ficon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.quantity-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    background: #04455d;
+    color: white;
+    font-size: 9px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.icon-list img {
+    width: 30px;
+}
+
+/**************************************************************/
+
+.old-price {
+    text-decoration: line-through;
+    /* Strikethrough for old price */
+    margin-right: 5px;
+    /* Space between old and new price */
+}
+
+.new-price {
+    font-weight: bold;
+    /* Bold for new price */
+}
+
+
+/*--------------------------------SECTION HEADER--------------------------*/
+.section-title {
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center items vertically */
+    margin: 60px 0;
+    /* Add vertical margin for spacing */
+    padding-left: 7%;
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+    /* Adjust font size as needed */
+    margin: 0 10px;
+    /* Add horizontal margin to create space around the title */
+    position: relative;
+    /* Position relative for the line */
+    z-index: 1;
+    /* Ensure the title is above the line */
+}
+
+.line {
+    flex-grow: 1;
+    /* Allow the line to grow and take available space */
+    height: 4px;
+    /* Height of the line */
+    background-color: #ffffff;
+    /* Color of the line */
+    margin-left: 10px;
+    /* Space between the title and the line */
+    margin-right: 10%;
+}
+
+/*---------------------ICONS PROPERTIES----------------*/
+.items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    /* Adjust spacing between items */
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    border-radius: 5px;
+    /* Optional: for rounded icons */
+}
+
+.quantity-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    background: #04455d;
+    color: white;
+    font-size: 9px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+/************************************ITEM BOXES********************************/
+.item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: linear-gradient(to Bottom, #000000, #111b36);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-box:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/* Top Section: Days Left */
+.days-left {
+    background: linear-gradient(to right, #5ce1e6, #04455d);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Product Image */
+.game-item {
+    width: 150px;
+    margin: 10px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+#plain{
+    display: block;
+    margin: 40px auto 0 auto;
+}
+
+/* Bottom Section */
+.bottom-section {
+    background-color: #141b27;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+}
+
+.limit {
+    font-size: 10px;
+}
+
+/* Product Name */
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Price Button */
+.price {
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: #ffffff;
+    border: none;
+    font-size: 13px;
+    padding: 6px 6px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80%;
+    display: block;
+    margin: auto;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 51;
+}
+
+.special-label {
+    background-color: #fffa61;
+    /* Light blue */
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    position: absolute;
+    top: 45px;
+    /* Adjust as needed */
+    left: 10px;
+    /* Align it properly */
+}
+
+.special-label2{
+    background-color: #fffa61;
+    /* Light blue */
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    position: absolute;
+    top: 20px;
+    /* Adjust as needed */
+    left: 10px;
+}
+
+.row {
+    --bs-gutter-x: 10px;
+    /* horizontal gap */
+    --bs-gutter-y: 50px;
+    /* vertical gap */
+}
+
+.discount-btn2 {
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: white;
+    margin: auto;
+    border: none;
+    font-size: 13px;
+    padding: 6px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+    z-index: 52;
+}
+
+.discount-btn2:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.price:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+/*---------------------COIN PRODUCTS-------------------------*/
+
+.coin-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures uniform spacing */
+    height: 100%;
+    /* Makes all boxes take the same height */
+    background: linear-gradient(to bottom, #796b24, #1d2b72);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.coin-box:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.bottom-section #coin-bottom{
+    background-color: #3b465a;
+    padding: 10px;
+    border-top: 1px solid white;
+    position: relative;
+    /* Ensures it stays inside */
+    width: 100%;
+    height: auto;
+    /* Adjust based on content */
+    min-height: 60px;
+}
+
+/*---------------------------DAILY BUNDLES-----------------*/
+.bundle-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: linear-gradient(to bottom, #151d44, #2c8c89);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bundle-box:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.bundleprice{
+    background: linear-gradient(90deg, #04455d, #5ce1e6);
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40%;
+    display: block;
+    margin-left: 10vh;
+    margin-right: 2vh;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 400;
+}
+.bundleprice:hover {
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(90deg, #5ce1e6, #04455d);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.846);
+}
+
+.coin-icon{
+    width: 13%;
+}
+
+#bundlezz{
+    width: 170px;
+}
+
+
+
+
+@media (max-width: 760px) {
+    /* Make navbar 1 a hamburger */
+    .nav-bar-1 {
+        display: none; /* Hide the default navbar */
+    }
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+    }
+
+    .hamburger-content {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .hamburger-menu:hover .hamburger-content {
+        display: block;
+    }
+
+    /* Reduce navbar 2 size */
+    .nav-bar-2 {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for mobile */
+    .nav-bar-2 {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

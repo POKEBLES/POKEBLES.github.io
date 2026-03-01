@@ -1,0 +1,346 @@
+/* event_ticketing.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url('/event ticketing page/eventticketingbg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.top-banner {
+    background: linear-gradient(to right, #fffa76, #f7aa03);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center !important;
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px;
+    margin-left: 15vh;
+}
+
+.navbar1 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important;
+    background: #0a121f;
+    height: 90px !important;
+    border-radius: 0 0 20px 20px; /* Rounded bottom only */
+    box-shadow: 0px 5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: 10vh;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Sanrio-Style Hover Effect Integrated */
+.menu-a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all ease;
+}
+
+/* Individual Hover Effects */
+
+.code-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ffdd57; /* Yellow */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.event-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #ff66b2; /* Pink */
+    transition: width 0.3s ease-in-out;
+    font-weight: 10px;
+    margin-top: 5px;
+}
+
+.sign-in-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #58c8f5; /* Light Blue */
+    transition: width 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+/* Hover Underline Effect */
+.code-link:hover::after {
+    width: 100%;
+}
+
+.event-link:hover::after {
+    width: 100%;
+}
+
+.sign-in-link:hover::after {
+    width: 100%;
+}
+
+.background {
+    position: relative;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pokemon-left, .pokemon-right {
+    position: absolute;
+    z-index: 10; /* Higher than the cards */
+    animation: floatAnimation 3s ease-in-out infinite; /* Smooth floating effect */
+}
+
+
+ .pokemon-left {
+    position: absolute;
+    left: -70px; /* Move more outside */
+    top: 150px; /* Adjust height */
+    width: 500px; /* Increase size */
+    rotate: -10deg;
+}
+
+.pokemon-right {
+    position: absolute;
+    right: -50px; /* Move more outside */
+    top: -5px; /* Adjust height */
+    width: 450px; /* Increase size */
+}
+
+/* Back to Home Button */
+.back-to-home-btn {
+    position: absolute;
+    /* Change to absolute for better positioning */
+    top: 21vh;
+    /* Adjust as needed */
+    left: 10vh;
+    /* Move to the left side */
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+/* Event Ticketing Specific Styles */
+
+.content {
+    background: linear-gradient(90deg, #4b1e5e, rgb(255, 191, 226));
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.content h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-item {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Or 'contain', depending on your preference */
+}
+
+.event-details {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.event-details h2 {
+    margin-bottom: 10px;
+}
+
+.buy-ticket-button {
+    background-color: #24dbf7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-ticket-button:hover {
+    background-color: #0f7f90;
+}
+
+/*---------------------------FOOTER-----------------*/
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #073e48, #000000); /* Dark gradient */
+    color: white;
+    height: 40vh;
+    padding-top: 20px; /* Adjusted padding */
+    padding-bottom: 20px;
+    font-size: 14px;
+    border-radius: 20px 20px 0 0; /* Rounded top corners only */
+    box-shadow: 0px -5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    display: flex;
+    justify-content: center; /* Center the footer content horizontally */
+    align-items: center; /* Center the footer content vertically */
+    width: 100%; /* Ensure full width */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out the columns evenly */
+    align-items: center; /* Vertically center the items */
+    width: 90%; /* Adjust width to ensure content is centered properly */
+    max-width: 1200px; /* Optional: set a maximum width for large screens */
+    gap: 40px; /* Adjusted gap between the columns */
+}
+
+/* Footer Left: Links */
+.footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align links to the left */
+    width: 30%; /* Adjust width */
+}
+
+.footer .links .col-6 {
+    padding: 0 15px; /* Add spacing between the columns of links */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+    margin: 5px 0; /* Add vertical space between the links */
+    font-size: 15px;
+}
+
+/* Hover effect on links */
+.footer a:hover {
+    color: #ffcc00 !important; /* Force color change */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+/* Footer Center: All Rights Reserved */
+.footer .rights-reserved {
+    text-align: center;
+    width: 30%; /* Center section width */
+    
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Right: Logo */
+.footer .logo {
+    text-align: right;
+    width: 30%; /* Right section width */
+}
+
+/* Footer Text Styling */
+.footer p {
+    font-size: 15px;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center; /* Center the text */
+        gap: 20px; /* Added gap for stacked layout */
+    }
+
+    .footer .links {
+        width: 100%; /* Make the links section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .rights-reserved {
+        width: 100%; /* Make the rights-reserved section full width */
+        margin-bottom: 15px;
+    }
+
+    .footer .logo {
+        width: 100%; /* Make the logo section full width */
+    }
+}

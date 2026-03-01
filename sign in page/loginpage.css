@@ -1,0 +1,163 @@
+/* Import Google Fonts & Icons */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Allow scrolling */
+    height: auto;
+    min-height: 100vh;
+    overflow: auto; /* Allow footer to be visible */
+}
+
+/* Background Effects */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 255, 159, 0.15), rgba(0, 186, 255, 0.15), rgba(255, 153, 0, 0.15));
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    background: #1a1a1a;
+    width: 50%;
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    position: relative;
+}
+
+
+/* Logo */
+.logo img {
+    width: 50px;
+}
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Sign-in Text */
+.signin-text {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+.buttons .btn {
+    width: 80%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Styles */
+.apple { background: black; box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); }
+.facebook { background: #1877f2; box-shadow: 0 0 8px rgba(24, 119, 242, 0.5); }
+.google { background: white; color: black; box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
+.niantic { background: red; box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); }
+.pokemon { background: green; box-shadow: 0 0 8px rgba(0, 255, 0, 0.5); }
+
+/* Hover Effects */
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Signup Text */
+.signup-text {
+    margin: 15px 0;
+    font-size: 14px;
+}
+.signup-text a {
+    color: #00FFFF;
+    text-decoration: none;
+}
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Promo Section */
+.promo {
+    background: #0a3d62;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.promo img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+.promo .store-buttons img {
+    width: 80px;
+    margin: 5px;
+}
+
+/* Help Center */
+.help {
+    margin: 15px 0;
+}
+.help a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+.help a:hover {
+    text-decoration: underline;
+}
+
+
+/* Language Selector */
+.language-selector {
+    background: #333;
+    color: white;
+    border: 1px solid #777;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Back Home Button */
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-home-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
