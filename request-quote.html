@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a detailed quote for your signage project from Manforest Graphics.">
+    <title>Request a Quote - Manforest Graphics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Manforest Graphics Logo">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-outline">Login</a></li>
+                    <li><a href="request-quote.html" class="btn btn-primary">Request Quote</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Request a Quote</h1>
+            <p>Get a detailed quotation for your signage project</p>
+        </div>
+    </section>
+
+    <!-- Quote Request Form -->
+    <section class="quote-request-section">
+        <div class="container">
+            <div class="quote-intro">
+                <h2>Tell Us About Your Project</h2>
+                <p>Fill out this detailed form to help us understand your requirements and provide an accurate quotation. All fields marked with * are required.</p>
+                <div class="auth-notice" style="background: #fff3cd; border: 1px solid #ffc107; color: #856404; padding: 0.875rem; border-radius: 8px; margin: 1.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="fas fa-info-circle" style="font-size: 1.25rem;"></i>
+                    <span><strong>Note:</strong> You must <a href="login.html" style="color: #856404; text-decoration: underline; font-weight: 600;">log in</a> or <a href="register.html" style="color: #856404; text-decoration: underline; font-weight: 600;">sign up</a> to submit a quote request.</span>
+                </div>
+                <div class="quote-steps">
+                    <div class="step-indicator">
+                        <div class="step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Contact Info</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Project Details</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Requirements</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="quote-form-detailed" id="quoteRequestForm">
+                <!-- Step 1: Contact Information -->
+                <div class="form-step active" id="step1">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Business Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">Industry/Business Type *</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select your industry</option>
+                            <option value="retail">Retail/Department Store</option>
+                            <option value="restaurant">Restaurant/Food Service</option>
+                            <option value="hotel">Hotel/Resort</option>
+                            <option value="corporate">Corporate/Office</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Business Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Project Details -->
+                <div class="form-step" id="step2">
+                    <h3>Project Details</h3>
+
+                    <div class="form-group">
+                        <label for="projectType">Project Type *</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select project type</option>
+                            <option value="new">New Installation</option>
+                            <option value="replacement">Sign Replacement</option>
+                            <option value="renovation">Store Renovation</option>
+                            <option value="rebranding">Rebranding</option>
+                            <option value="expansion">Business Expansion</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Services Required * (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="design" required>
+                                <span>Design & Consultation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="fabrication">
+                                <span>Fabrication</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="printing">
+                                <span>Printing</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="installation">
+                                <span>Installation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="delivery">
+                                <span>Delivery</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signageType">Type of Signage Needed *</label>
+                        <select id="signageType" name="signageType" required multiple size="6">
+                            <option value="storefront">Storefront/Building Sign</option>
+                            <option value="channel-letters">Channel Letters</option>
+                            <option value="illuminated">Illuminated/LED Signs</option>
+                            <option value="monument">Monument Signs</option>
+                            <option value="wayfinding">Wayfinding/Directional</option>
+                            <option value="menu-board">Menu Boards</option>
+                            <option value="indoor">Indoor Signs</option>
+                            <option value="banners">Banners/Promotional</option>
+                            <option value="vehicle">Vehicle Graphics</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Approximate Quantity *</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="targetDate">Target Completion Date</label>
+                            <input type="date" id="targetDate" name="targetDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency">Project Urgency *</label>
+                            <select id="urgency" name="urgency" required>
+                                <option value="">Select urgency</option>
+                                <option value="flexible">Flexible Timeline</option>
+                                <option value="standard">Standard (2-4 weeks)</option>
+                                <option value="rush">Rush (1-2 weeks)</option>
+                                <option value="emergency">Emergency (Less than 1 week)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep(1)"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(3)">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Requirements & Specifications -->
+                <div class="form-step" id="step3">
+                    <h3>Requirements & Specifications</h3>
+
+                    <div class="form-group">
+                        <label for="dimensions">Approximate Dimensions (if known)</label>
+                        <input type="text" id="dimensions" name="dimensions" placeholder="e.g., 10ft x 5ft or 3m x 1.5m">
+                    </div>
+
+                    <div class="quote-estimator" id="quoteEstimator">
+                        <h4>Raw Material Cost Estimator</h4>
+                        <p>Estimate raw material costs based on your selected services, preferred materials, and size specifications.</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="specWidth">Width *</label>
+                                <input type="number" id="specWidth" name="specWidth" min="0.1" step="0.1" placeholder="e.g., 10">
+                            </div>
+                            <div class="form-group">
+                                <label for="specHeight">Height *</label>
+                                <input type="number" id="specHeight" name="specHeight" min="0.1" step="0.1" placeholder="e.g., 5">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="specUnit">Unit</label>
+                                <select id="specUnit" name="specUnit">
+                                    <option value="ft">Feet (ft)</option>
+                                    <option value="m">Meters (m)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="wastage">Wastage Allowance (%)</label>
+                                <input type="number" id="wastage" name="wastage" min="0" max="30" step="1" value="10">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sides">Print/Application Sides</label>
+                                <select id="sides" name="sides">
+                                    <option value="1">Single-sided</option>
+                                    <option value="2">Double-sided</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="materialGrade">Material Grade</label>
+                                <select id="materialGrade" name="materialGrade">
+                                    <option value="standard">Standard</option>
+                                    <option value="premium">Premium</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="estimator-actions">
+                            <button type="button" class="btn btn-secondary" id="calculateEstimateBtn">
+                                <i class="fas fa-calculator"></i> Calculate Estimate
+                            </button>
+                        </div>
+
+                        <div class="estimator-result" id="estimatorResult" style="display: none;">
+                            <h5>Estimated Raw Material Breakdown</h5>
+                            <div class="estimate-grid">
+                                <div class="estimate-item">
+                                    <span>Total Area</span>
+                                    <strong id="estimateArea">0 sqm</strong>
+                                </div>
+                                <div class="estimate-item">
+                                    <span>Quantity</span>
+                                    <strong id="estimateQuantity">0</strong>
+                                </div>
+                                <div class="estimate-item">
+                                    <span>Material Cost</span>
+                                    <strong id="estimateMaterialCost">₱0</strong>
+                                </div>
+                                <div class="estimate-item">
+                                    <span>Service Spec Impact</span>
+                                    <strong id="estimateServiceCost">₱0</strong>
+                                </div>
+                            </div>
+                            <div class="estimate-total">
+                                <span>Estimated Total</span>
+                                <strong id="estimateTotal">₱0</strong>
+                            </div>
+                            <small class="estimate-note">This is an automated estimate for planning purposes. Final quotation may vary after technical assessment and site validation.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="materials">Preferred Materials (if any)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="aluminum">
+                                <span>Aluminum</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="stainless-steel">
+                                <span>Stainless Steel</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="acrylic">
+                                <span>Acrylic</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="pvc">
+                                <span>PVC</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="wood">
+                                <span>Wood</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="vinyl">
+                                <span>Vinyl</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="materials" value="no-preference">
+                                <span>No Preference (Recommend)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Installation Location *</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select location</option>
+                            <option value="indoor">Indoor</option>
+                            <option value="outdoor">Outdoor</option>
+                            <option value="both">Both Indoor & Outdoor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Illumination Needed? *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="illumination" value="yes" required>
+                                <span>Yes, illuminated signage</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="illumination" value="no" required>
+                                <span>No, non-illuminated</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="illumination" value="unsure" required>
+                                <span>Not sure, need recommendation</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="colors">Brand Colors (if specific colors required)</label>
+                        <input type="text" id="colors" name="colors" placeholder="e.g., Red (#FF0000), Blue, Pantone 186">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hasDesign">Do you have existing design/artwork? *</label>
+                        <select id="hasDesign" name="hasDesign" required>
+                            <option value="">Select an option</option>
+                            <option value="yes-complete">Yes, complete design ready</option>
+                            <option value="yes-partial">Yes, partial design/concepts</option>
+                            <option value="logo-only">Only have logo</option>
+                            <option value="no">No, need full design service</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-50k">Under ₱50,000</option>
+                            <option value="50k-100k">₱50,000 - ₱100,000</option>
+                            <option value="100k-250k">₱100,000 - ₱250,000</option>
+                            <option value="250k-500k">₱250,000 - ₱500,000</option>
+                            <option value="over-500k">Over ₱500,000</option>
+                            <option value="flexible">Flexible/Open</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDescription">Project Description *</label>
+                        <textarea id="projectDescription" name="projectDescription" rows="6" required placeholder="Please provide detailed information about your signage needs, including purpose, location details, special requirements, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fileUpload">Upload Reference Files (Optional)</label>
+                        <input type="file" id="fileUpload" name="files" multiple accept="image/*,.pdf,.doc,.docx">
+                        <small>Accepted formats: Images, PDF, Word documents (Max 10MB per file)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hearAbout">How did you hear about us?</label>
+                        <select id="hearAbout" name="hearAbout">
+                            <option value="">Select an option</option>
+                            <option value="google">Google Search</option>
+                            <option value="facebook">Facebook/Social Media</option>
+                            <option value="referral">Referral from Friend/Client</option>
+                            <option value="existing">Existing Client</option>
+                            <option value="signage">Saw Your Signage Work</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(4)">Review <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review & Submit -->
+                <div class="form-step" id="step4">
+                    <h3>Review Your Request</h3>
+                    <p>Please review your information before submitting</p>
+
+                    <div class="review-section" id="reviewContent">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <span>I agree to the <a href="terms-conditions.html" target="_blank">Terms & Conditions</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <span>Subscribe to newsletter for updates and special offers</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Submit Quote Request
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="quote-success" id="quoteSuccess" style="display: none;">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Quote Request Submitted Successfully!</h2>
+                <p>Thank you for your interest in Manforest Graphics. We've received your quote request and will review it carefully.</p>
+                <div class="success-details">
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Confirmation email sent to <strong id="confirmEmail"></strong></p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <p>We'll respond within <strong>24-48 hours</strong></p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-hashtag"></i>
+                        <p>Your reference number: <strong id="referenceNumber"></strong></p>
+                    </div>
+                </div>
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Our Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-quote">
+        <div class="container">
+            <h2>What Happens Next?</h2>
+            <div class="process-timeline-horizontal">
+                <div class="timeline-step">
+                    <div class="timeline-icon">1</div>
+                    <h3>We Review</h3>
+                    <p>Our team carefully reviews your requirements</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-icon">2</div>
+                    <h3>We Contact You</h3>
+                    <p>We'll reach out for any clarifications</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-icon">3</div>
+                    <h3>Quotation Sent</h3>
+                    <p>Receive detailed pricing within 48 hours</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-icon">4</div>
+                    <h3>Project Begins</h3>
+                    <p>Upon approval, we start your project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Manforest Graphics</h3>
+                    <p>Professional signage solutions for over 25 years. Serving businesses nationwide across retail, restaurant, and hospitality sectors.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ManforestGraphics" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="viber://chat?number=09988672372" aria-label="Viber"><i class="fab fa-viber"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="service-details.html?service=fabrication">Design & Fabrication</a></li>
+                        <li><a href="service-details.html?service=printing">Printing Services</a></li>
+                        <li><a href="service-details.html?service=installation">Installation</a></li>
+                        <li><a href="service-details.html?service=delivery">Delivery Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 303B Haig St, Bgy Bagong Silang, Mandaluyong, 1550</li>
+                        <li><i class="fas fa-phone"></i> 0998 867 2372</li>
+                        <li><i class="fas fa-envelope"></i> manforest_graphics@yahoo.com</li>
+                        <li><i class="fas fa-globe"></i> manforestgraphics.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Manforest Graphics and Design Services, Inc. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/quote-request.js"></script>
+</body>
+</html>
